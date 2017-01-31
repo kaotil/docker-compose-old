@@ -8,8 +8,11 @@ services:
     container_name: nginx
     links:
       - php-fpm
-
+    volumes_from:
+      - php-fpm
   php-fpm:
     build: ./php-fpm
     hostname: php-fpm
     container_name: php-fpm
+    volumes:
+      - /var/www/html
