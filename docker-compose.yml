@@ -15,4 +15,4 @@ services:
     hostname: php-fpm
     container_name: php-fpm
     volumes:
-      - /var/www
+      - ../src:/var/www
